@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+
+def F(x) :
+  y = 1 + x**(-1) + (1/4)*x**4
+  return y
+
+x = np.linspace( 0, 1, 100 )
+y = F(x)
+
+plt.plot( x, y, '-' )
+plt.xlabel( 'x' )
+plt.ylabel( 'y' )
+plt.title( "xy′′+2y'=x" )
+plt.text( 0.965, 0, 'Copyright@ytl' )
+
+plt.show()

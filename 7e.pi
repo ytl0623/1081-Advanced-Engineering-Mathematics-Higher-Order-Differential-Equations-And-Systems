@@ -1,0 +1,7 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+from sympy.abc import t,s
+
+ans = inverse_laplace_transform( s/((s-2)*(s-3)*(s-6)), s, t )
+print(ans)

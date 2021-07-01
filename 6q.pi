@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+
+def F(t) :
+  y = (12/25)*np.exp(-5*t) - (12/5)*t*np.exp(-5*t) + (12/25)
+  return y
+
+t = np.linspace( 0, 2, 100 )
+q = F(t)
+
+plt.plot( t, q, '-' )
+plt.xlabel( 't' )
+plt.ylabel( 'q(t)' )
+plt.title( "charge q(t)" )
+plt.text( 1.9, 0.4, 'Copyright@ytl' )
+
+plt.show()

@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+
+def F(x) :
+  y = np.exp(x) + np.exp(2*x) + x*np.exp(2*x)
+  return y
+
+x = np.linspace( 0, 1, 100 )
+y = F(x)
+
+plt.plot( x, y, '-' )
+plt.xlabel( 'x' )
+plt.ylabel( 'y' )
+plt.title( "y′′-3y'+2y=exp(2x)" )
+plt.text( 0.96, 1.5, 'Copyright@ytl' )
+
+plt.show()

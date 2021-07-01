@@ -1,0 +1,7 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+from sympy.abc import t,s
+
+ans = laplace_transform( t*sin(2*t), t, s )
+print(ans)

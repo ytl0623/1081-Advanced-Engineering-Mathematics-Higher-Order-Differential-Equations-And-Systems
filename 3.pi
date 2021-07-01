@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+
+def F(x) :
+  y = x + x**3
+  return y
+
+x = np.linspace( 0, 1, 100 )
+y = F(x)
+
+plt.plot( x, y, '-' )
+plt.xlabel( 'x' )
+plt.ylabel( 'y' )
+plt.title( "x^2y′′-3xy'+3y=0" )
+plt.text( 0.96, 0, 'Copyright@ytl' )
+
+plt.show()

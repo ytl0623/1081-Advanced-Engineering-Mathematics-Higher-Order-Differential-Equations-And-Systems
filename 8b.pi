@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sympy import*
+
+def F(t):
+  y = np.exp(-t) * np.cos(4*t) * np.heaviside(t-(np.pi/2),1)	
+  return y
+  
+t = np.linspace( 0, 4*np.pi, 100 )
+y = F(t)
+
+plt.plot( t, y, '-' )
+plt.xlabel( 't' )
+plt.ylabel( 'f(t)' )
+plt.title( "f(t)=exp(-t)cos(4t)u(t−π/2)" )
+plt.text( 12, -0.1, 'Copyright@ytl' )
+
+plt.show()
